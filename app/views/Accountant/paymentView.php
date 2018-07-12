@@ -2,7 +2,7 @@
 <div class="card mb-3 p-2 mt-3">
 
 <div class="card-block">
-<h4>&nbsp; Admin - Healer view</h4>
+<h4>&nbsp; Accountant - Payment view</h4>
 </div>
 
 </div>

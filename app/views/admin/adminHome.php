@@ -2,7 +2,7 @@
     <div class="card mb-3 p-2 mt-3">
 
         <div class="card-block">
-            <h4> &nbsp;Admin - User Home</h4>
+            <h4> &nbsp;Admin -Home</h4>
         </div>
 
     </div>

@@ -13,8 +13,12 @@ use Helpers\Hooks;
 
 
 
-Router::any('', 'Controllers\Admin@userView');
+Router::any('login', 'Controllers\Admin@demo');
+Router::any('admin/home', 'Controllers\Admin@Home');
 Router::any('admin/userView', 'Controllers\Admin@userView');
+Router::any('admin/userAdd', 'Controllers\Admin@userAdd');
+Router::any('acct/update', 'Controllers\Accountant@paymentView');
+Router::any('acct/view', 'Controllers\Accountant@paymentUpdate');
 
 
 
