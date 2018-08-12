@@ -17,18 +17,9 @@ use Core\View,
 class Admin extends \Core\Controller {
 
 
-    public function demo() {
-
-        View::renderTemplate('header', array('title' => 'Register'));
-
-        View::render('common/login');
-
-        View::renderTemplate('footer');
-
-    }
     public function Home() {
 
-        View::renderTemplate('header', array('title' => 'admin Home'));
+        View::renderTemplate('header', array('title' => 'Home'));
 
         View::render('admin/adminHome');
 
@@ -37,7 +28,7 @@ class Admin extends \Core\Controller {
     }
     public function userView() {
 
-        View::renderTemplate('header', array('title' => 'admin User-View'));
+        View::renderTemplate('header', array('title' => 'User-View'));
 
         View::render('admin/userView');
 
@@ -46,7 +37,7 @@ class Admin extends \Core\Controller {
     }
     public function userAdd() {
 
-        View::renderTemplate('header', array('title' => 'admin User-Add'));
+        View::renderTemplate('header', array('title' => 'User-Add'));
 
         View::render('admin/userAdd');
 

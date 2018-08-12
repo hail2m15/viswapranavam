@@ -16,20 +16,11 @@ use Core\View,
 class Accountant extends \Core\Controller {
 
 
-    public function demo() {
-
-        View::renderTemplate('header', array('title' => 'Register'));
-
-        View::render('common/login');
-
-        View::renderTemplate('footer');
-
-    }
     public function Home() {
 
         View::renderTemplate('header', array('title' => 'admin Home'));
 
-        View::render('admin/adminHome');
+        View::render('accountant/home');
 
         View::renderTemplate('footer');
 

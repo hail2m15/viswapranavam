@@ -1,13 +1,26 @@
 <div class="background"></div>
 <div class="form admin-login">
-  <form class="login-form">
+    <form method="post" class="login-form">
   <h2>Viswapranavam</h2>
   <br>  
-    <input type="text" placeholder="username"/>
-    <input type="password" placeholder="password"/>
-    <button>login</button>
+  <input type="text" name="username" placeholder="username" required=""/>
+  <input type="password" name="password" placeholder="password" required=""/>
+    <button type="submit" name="submit">login</button>
   </form>
 </div>
+
+    <center>
+        <div class="col-md-4">
+            <?php
+
+            use Core\Error;
+
+if ($error) {
+                echo Error::display($error);
+            }
+            ?>
+        </div>
+    </center>
 
 <style>
     .body{

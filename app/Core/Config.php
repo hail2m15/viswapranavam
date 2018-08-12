@@ -60,17 +60,17 @@ class Config
         /*
          * Database host default is localhost.
          */
-        define('DB_HOST', '');
+        define('DB_HOST', 'localhost');
 
         /*
          * Database name.
          */
-        define('DB_NAME', '');
+        define('DB_NAME', 'viswapranavam_db');
 
         /*
          * Database username.
          */
-        define('DB_USER', '');
+        define('DB_USER', 'root');
 
         /*
          * Database password.
@@ -80,17 +80,17 @@ class Config
         /*
          * PREFER to be used in database calls default is smvc_
          */
-        define('PREFIX', '');
+        define('PREFIX', 'Vishwa_');
 
         /*
          * Set prefix for sessions.
          */
-        define('SESSION_PREFIX', '');
+        define('SESSION_PREFIX', 'Vishwa_');
 
         /*
          * Optional create a constant for the name of the site.
          */
-        define('SITETITLE', '');
+        define('SITETITLE', 'Viswapranavam');
 
         /*
          * Optional set a site email address.
