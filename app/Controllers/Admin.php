@@ -16,6 +16,13 @@ use Core\View,
 
 class Admin extends \Core\Controller {
 
+    public function __construct() {
+        $this->_model = new \Models\AuthModel();
+        if (!Session::get('vadmin')) {
+            Url::redirect('');
+        }
+    }
+
 
     public function Home() {
 
