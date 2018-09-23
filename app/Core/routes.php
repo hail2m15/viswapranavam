@@ -18,6 +18,8 @@ Router::any('admin/logout', 'Controllers\Auth@logout');
 Router::any('admin/home', 'Controllers\Admin@Home');
 Router::any('admin/userView', 'Controllers\Admin@userView');
 Router::any('admin/userAdd', 'Controllers\Admin@userAdd');
+Router::any('admin/healerView', 'Controllers\Admin@healerView');
+Router::any('admin/healerAdd', 'Controllers\Admin@healerAdd');
 
 Router::any('accountant/logout', 'Controllers\Auth@logout');
 Router::any('accountant/home', 'Controllers\Accountant@Home');

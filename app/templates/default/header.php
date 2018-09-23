@@ -26,22 +26,32 @@ $hooks = Hooks::get();
         <!-- CSS -->
         <?php
         Assets::css([
-            Url::templatePath() . 'css/bootstrap.min.css',
-            Url::templatePath() . 'css/datatables.min.css',
-            Url::templatePath() . 'css/font-awesome/css/font-awesome.min.css',
-            Url::templatePath() . 'css/style.css',
-            Url::templatePath() . 'css/light-bootstrap-dashboard.css',
+            Url::templatePath() . 'vendor/bootstrap/css/bootstrap.min.css',
+            Url::templatePath() . 'vendor/font-awesome/css/font-awesome.min.css',
+            Url::templatePath() . 'vendor/datatables/dataTables.bootstrap4.css',
+            Url::templatePath() . 'css/sb-admin.css',
+            Url::templatePath() . 'css/jquery-ui.css',
+            Url::templatePath() . 'css/jquery-ui.min.css',
+            Url::templatePath() . 'css/amstyle.css',
         ]);
         ?>
 
         <?php
         Assets::js([
-            Url::templatePath() . 'js/jquery.min.js',
-            Url::templatePath() . 'js/bootstrap.min.js',
+            Url::templatePath() . 'vendor/jquery/jquery.min.js',
+            Url::templatePath() . 'js/jquery-ui.js',
             Url::templatePath() . 'js/jquery-ui.min.js',
-            Url::templatePath() . 'js/datatables.min.js',
-            Url::templatePath() . 'js/fontawesome.js',
-            Url::templatePath() . 'js/light-bootstrap-dashboard.js',
+            Url::templatePath() . 'vendor/popper/popper.min.js',
+            Url::templatePath() . 'vendor/bootstrap/js/bootstrap.min.js',
+            Url::templatePath() . 'vendor/jquery-easing/jquery.easing.min.js',
+            Url::templatePath() . 'vendor/chart.js/Chart.min.js',
+            Url::templatePath() . 'vendor/datatables/jquery.dataTables.js',
+            Url::templatePath() . 'vendor/datatables/dataTables.bootstrap4.js',
+            Url::templatePath() . 'js/sb-admin.min.js',
+            Url::templatePath() . 'js/sb-admin-datatables.min.js',
+            Url::templatePath() . 'js/sb-admin-charts.min.js',
+            Url::templatePath() . 'js/jquery.table2excel.js',
+            Url::templatePath() . 'js/karan.js'
         ]);
         //hook for plugging in css
         $hooks->run('css');
@@ -50,7 +60,7 @@ $hooks = Hooks::get();
 
 
     </head>
-    <body>
+    <body  class="fixed-nav sticky-footer bg-dark" id="page-top">
 
         <?php
 //hook for running code after body tag

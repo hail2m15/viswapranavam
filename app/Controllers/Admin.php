@@ -23,32 +23,41 @@ class Admin extends \Core\Controller {
         }
     }
 
+    public function loadHeader($title){
+        View::renderTemplate('header', array('title' => $title));
+        View::render('admin/common/head');
+    }
 
+     public function loadFooter(){
+        View::render('admin/common/foot');
+        View::renderTemplate('footer');
+    }
+    
     public function Home() {
 
-        View::renderTemplate('header', array('title' => 'Home'));
+        $this->loadHeader('Home');
 
         View::render('admin/adminHome');
 
-        View::renderTemplate('footer');
+        $this->loadFooter();
 
     }
-    public function userView() {
+    public function healerView() {
 
-        View::renderTemplate('header', array('title' => 'User-View'));
+        $this->loadHeader('User');
 
-        View::render('admin/userView');
+        View::render('admin/healerView');
 
-        View::renderTemplate('footer');
+        $this->loadFooter();
 
     }
-    public function userAdd() {
+    public function healerAdd() {
 
-        View::renderTemplate('header', array('title' => 'User-Add'));
+        $this->loadHeader('Add User');
 
-        View::render('admin/userAdd');
+        View::render('admin/healerAdd');
 
-        View::renderTemplate('footer');
+        $this->loadFooter();
 
     }
 

@@ -1,56 +1,81 @@
-<div class="wrapper">
-    <div class="sidebar" data-color="red" data-image="../images/sidebar-5.jpg">
 
-        <!--   you can change the color of the side bar using: data-color="blue | azure | green | orange | red | purple" -->
-
-
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="home" class="simple-text">
-                    <img src="../images/logo.jpg" alt="wedding" style="width: 169px;height: 100px;"/>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="home">FOS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="home">
+                    <i class="fa fa-fw fa-home"></i>
+                    <span class="nav-link-text">HOME</span>
                 </a>
-            </div>
+            </li>
 
-            <ul class="nav">
-                <li  class="active">
-                    <a href="home">
-                        <i class="fa fa-book"></i>
-                        <p>BOOKING</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="followup">
-                        <i class="fa fa-user"></i>
-                        <p>FOLLOWUP</p>
-                    </a>
-                </li>
 
-            </ul>
-        </div>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                    <i class="fa fa-book"></i>
+                    <span class="nav-link-text">ENTRIES</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="byagents">BY AGENTS</a>
+                    </li>
+                    <li>
+                        <a href="allentries">ALL ENTRIES</a>
+                    </li>
+                </ul>
+            </li>
+            
+             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport" data-parent="#exampleAccordion">
+                    <i class="fa fa-book"></i>
+                    <span class="nav-link-text">REPORTS</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="reportall">ALL REPORT</a>
+                    </li>
+                    <li>
+                        <a href="reportByAgent">BY AGENTS</a>
+                    </li>
+                    <li>
+                        <a href="reportByArea">BY AREA</a>
+                    </li>
+                    <li>
+                        <a href="reportByProspect">BY PROSPECT TYPE</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="addagent">
+                    <i class="fa fa-users"></i>
+                    <span class="nav-link-text">AGENTS</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="changepassword">
+                    <i class="fa fa-lock"></i>
+                    <span class="nav-link-text">CHANGE PASSWORD</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link"  data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            </li>
+        </ul>
     </div>
-    <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand head" href="#" style="color:#ee2d20;">EVENT MANAGEMENT</a>
-                </div>
-                                <div class="collapse navbar-collapse">
+</nav>
 
 
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li>
-                            <a class="log" href="logout">
-                                <p style="font-size:14px;">LOGOUT&nbsp;&nbsp;<i class="glyphicon glyphicon-off"></i></p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                </div>
-
-        </nav>
