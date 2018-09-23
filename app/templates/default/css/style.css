@@ -194,3 +194,13 @@ border-color:#2eb9ce #2eb9ce #2eb9ce #7bd4b3;
 .paymentUpdate{
   font-size: 19px;
 }
+
+.sidebar-wrapper li{
+  flex: 0 0 100%!important;
+} 
+
+.sidebar-wrapper li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
