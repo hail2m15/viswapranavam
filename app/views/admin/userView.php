@@ -78,17 +78,7 @@ if ($data['success']) {
                     </thead>
 
                     <tbody>
-                        <?php
-                        foreach ($data['details'] as $dat) {
-                            echo '<tr>';
-                            echo '<td>' . $dat->name . '<input type="text" class="name" value="' . $dat->name . '" hidden ></td>';
-                            echo '<td>' . $dat->mobile . '<input type="text" class="mobile" value="' . $dat->mobile . '" hidden ></td>';
-                            echo '<td>' . $dat->address . '<input type="text" class="address" value="' . $dat->address . '" hidden ></td>';
-                            echo '<td><button class="btn btn-info edit" data-toggle="modal" data-target="#editModal">edit</button></td>';
-                            echo '<td><button class="btn btn-danger delete">remove</button></td>';
-                            echo '</tr>';
-                        }
-                        ?>        
+       
                     </tbody>
                 </table>
             </div>
