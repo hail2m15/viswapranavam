@@ -30,7 +30,7 @@ $hooks = Hooks::get();
             Url::templatePath() . 'css/datatables.min.css',
             Url::templatePath() . 'css/font-awesome/css/font-awesome.min.css',
             Url::templatePath() . 'css/style.css',
-
+            Url::templatePath() . 'css/light-bootstrap-dashboard.css',
         ]);
         ?>
 
@@ -41,8 +41,7 @@ $hooks = Hooks::get();
             Url::templatePath() . 'js/jquery-ui.min.js',
             Url::templatePath() . 'js/datatables.min.js',
             Url::templatePath() . 'js/fontawesome.js',
-
-
+            Url::templatePath() . 'js/light-bootstrap-dashboard.js',
         ]);
         //hook for plugging in css
         $hooks->run('css');
