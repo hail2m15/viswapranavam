@@ -197,10 +197,25 @@ div.card-login.transperency{
 }
 
 @media (min-width: 1200px){
-.register {
+.loginMain {
     max-width: 800px;
 }
 }
 .cus_lineheight input{
     line-height: 1.40!important;
+}
+.login-message{
+    text-align: center;
+    border: 1px solid #ff8585;
+    color: #f53939;
+}
+.login-message p{
+    margin: 4px 0px 4px 0px;
+}
+.passmatch{
+    font-style: italic;
+}
+input[type=submit]:disabled {
+    background: #dddddd;
+    cursor: not-allowed;
 }

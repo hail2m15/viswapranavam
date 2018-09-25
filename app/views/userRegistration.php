@@ -13,38 +13,40 @@
                         <div class="row register-form cus_lineheight">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Name *" value="" />
+                                    <input type="text" class="form-control" name="name" placeholder="Name *" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="address" placeholder="Your Address *" value="" />
+                                    <input type="text" class="form-control" name="address" placeholder="Your Address *" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="state" placeholder="State *" value="" />
+                                    <input type="text" class="form-control" name="state" placeholder="State *" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="country" placeholder="Country*" value="" />
+                                    <input type="text" class="form-control" name="country" placeholder="Country*" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password *" pattern=".{3,}" title="Minimum 3 Charecters" value="" required onkeyup='recheck();'/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password *"  value="" required onkeyup='check();'/>
+                                    <span id='message' class="passmatch"></span>
                                 </div>
+
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" placeholder="Email Address*" value="" />
+                                    <input type="email" class="form-control" name="email" placeholder="Email Address*" value="" required />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="city" placeholder="City *" value="" />
+                                    <input type="text" class="form-control" name="city" placeholder="City *" value="" required />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="ccode" placeholder="Country Code *" value="" />
+                                    <input type="text" class="form-control" name="ccode" placeholder="Country Code *" value=""  pattern="[0-9]{2,4}" required title="valid code must be entered" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="phone" placeholder="Phone *" value="" />
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone *" value="" pattern="[0-9]{10}"  required title="Valid 10 digit number required"/>
                                 </div>
-                                <input type="submit" class="btnRegister" name="register" value="Register"/>
+                                <input type="submit" id="regbtn" class="btnRegister" name="register" value="Register"/>
                             </div>
                         </div>
                     </form>
@@ -62,4 +64,37 @@
         background-size: cover;
     }
 </style>
+<script>
+    var check = function() {
+    if (document.getElementById('password').value == document.getElementById('cpassword').value) {
+        document.getElementById('cpassword').style.borderColor  = '#4d9e4d';
+        document.getElementById('message').style.color = '#4d9e4d';
+        document.getElementById('message').innerHTML = 'matching';
+        document.getElementById('regbtn').disabled = false; 
+    } else {
+        document.getElementById('cpassword').style.borderColor  = '#bf4040';
+        document.getElementById('message').style.color = '#bf4040';
+        document.getElementById('message').innerHTML = 'passwords not matching';
+        document.getElementById('regbtn').disabled = true; 
+
+    }
+    }
+    var recheck = function() {
+        if(document.getElementById('cpassword').value!=''){
+            if (document.getElementById('password').value == document.getElementById('cpassword').value) {
+                document.getElementById('cpassword').style.borderColor  = '#4d9e4d';
+                document.getElementById('message').style.color = '#4d9e4d';
+                document.getElementById('message').innerHTML = 'matching';
+                document.getElementById('regbtn').disabled = false; 
+
+            } else {
+                document.getElementById('cpassword').style.borderColor  = '#bf4040';
+                document.getElementById('message').style.color = '#bf4040';
+                document.getElementById('message').innerHTML = 'passwords not matching';
+                document.getElementById('regbtn').disabled = true; 
+
+            }
+        }
+    }
+</script>
 

@@ -1,4 +1,4 @@
-<div class="container register">
+<div class="container register loginMain">
     <div class="row">
         <div class="col-md-3 register-left login-left">
             <img src="./images/icon.png" alt=""/>
@@ -12,20 +12,25 @@
 
                         <form method="post">
                         <div class="row login-form cus_lineheight">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="form-group">
-                                    <input type="text" name="username" class="form-control" placeholder="UserName*"/>
+                                    <input type="text" name="username" class="form-control" placeholder="UserName*" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" class="form-control" placeholder="Password *"/>
+                                    <input type="password" name="password" class="form-control" placeholder="Password *" required/>
+                                </div>
+                                <div class="login-message">
+                                    <p>Username/Password doesnt match</p>
                                 </div>
                                 <div class="form-group" style="text-align:center">
                                     <input type="submit" name="submit" class="btnRegisterLogin"  value="Login"/>
                                 </div>
-                                </div>
+
                             </div>
+        
+                        </div>
                         </form>
 
                 </div>
