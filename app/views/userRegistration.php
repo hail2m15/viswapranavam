@@ -9,38 +9,40 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">User Registration</h3> 
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
+                    <form method="post">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="address" placeholder="Your Address *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="state" placeholder="State *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="country" placeholder="Country*" value="" />
+                                </div>
+
                             </div>
-                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Address *" value="" />
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Email Address*" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="city" placeholder="City *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister" name="register" value="Register"/>
                             </div>
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="State *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Country*" value="" />
-                            </div>
-                           
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email Address*" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="City *" value="" />
-                            </div>
-                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                            </div>
-                            <input type="submit" class="btnRegister"  value="Register"/>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
