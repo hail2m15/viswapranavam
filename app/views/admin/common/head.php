@@ -1,7 +1,7 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="home">FOS</a>
+    <a class="navbar-brand" href="home">ADMIN</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,50 +13,19 @@
                     <span class="nav-link-text">HOME</span>
                 </a>
             </li>
-
-
-
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                    <i class="fa fa-book"></i>
-                    <span class="nav-link-text">ENTRIES</span>
+            
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="healerView">
+                    <i class="fa fa-fw fa-medkit"></i>
+                    <span class="nav-link-text">HEALERS</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseComponents">
-                    <li>
-                        <a href="byagents">BY AGENTS</a>
-                    </li>
-                    <li>
-                        <a href="allentries">ALL ENTRIES</a>
-                    </li>
-                </ul>
             </li>
             
-             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport" data-parent="#exampleAccordion">
-                    <i class="fa fa-book"></i>
-                    <span class="nav-link-text">REPORTS</span>
-                </a>
-                <ul class="sidenav-second-level collapse" id="collapseReport">
-                    <li>
-                        <a href="reportall">ALL REPORT</a>
-                    </li>
-                    <li>
-                        <a href="reportByAgent">BY AGENTS</a>
-                    </li>
-                    <li>
-                        <a href="reportByArea">BY AREA</a>
-                    </li>
-                    <li>
-                        <a href="reportByProspect">BY PROSPECT TYPE</a>
-                    </li>
-                </ul>
-            </li>
-
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="addagent">
+                <a class="nav-link" href="userView">
                     <i class="fa fa-users"></i>
-                    <span class="nav-link-text">AGENTS</span>
+                    <span class="nav-link-text">USERS</span>
                 </a>
             </li>
 

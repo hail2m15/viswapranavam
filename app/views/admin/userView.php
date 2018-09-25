@@ -14,56 +14,10 @@
         </div>
     </div>
 
-    <!-- register form -->
-    <div class="container">
-        <div class="card card-register mx-4 ">
-            <div class="card-header">Register new agent</div>
-            <div class="card-body">
-                <form method="post">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-7">
-                                <label for="exampleInputName"> Name</label>
-                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter name" name="name" required="">
-                            </div>
-                            <div class="col-md-7">
-                                <label for="exampleInputLastName">Address</label>
-                                <textarea  class="form-control" id="exampleInputAddress"  aria-describedby="nameHelp" placeholder="Enter Address"  rows="3" cols="50" name="address"></textarea>
-                            </div>
-
-                            <div class= "col-md-7">
-                                <label for="exampleInputEmail1">Mobile</label>
-                                <input class="form-control" id="exampleInputPhonenumber" type="text" aria-describedby="mobileHelp" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" placeholder="Enter Mobile Number" name="mobile" required="">
-                            </div>
-                        </div>  
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="form-row">
-
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block col-md-7" name="save">Register</button>
-                </form>
-                <?php
-
-                use Core\Error;
-
-if ($data['success']) {
-                    echo '<br><div class="alert alert-success">' . $data['success'] . '</div>';
-                } else if ($error) {
-                    echo Error::display("Registration failed!");
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-    <br>
     <!--table-->
     <div class="card mb-3">
         <div class="card-header">
-            <i class="fa fa-table"></i>&nbspAGENT LIST</div>
+            <i class="fa fa-table"></i>&nbspUSER LIST</div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

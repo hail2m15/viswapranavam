@@ -37,7 +37,7 @@ class Admin extends \Core\Controller {
 
         $this->loadHeader('Home');
 
-        View::render('admin/adminHome');
+        View::render('admin/Home');
 
         $this->loadFooter();
 
@@ -61,6 +61,15 @@ class Admin extends \Core\Controller {
 
     }
 
+    public function userView() {
+
+        $this->loadHeader('User');
+
+        View::render('admin/userView');
+
+        $this->loadFooter();
+
+    }
 
     
 }
