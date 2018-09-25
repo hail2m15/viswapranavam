@@ -201,3 +201,6 @@ div.card-login.transperency{
     max-width: 800px;
 }
 }
+.cus_lineheight input{
+    line-height: 1.40!important;
+}

@@ -10,7 +10,7 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">User Registration</h3> 
                     <form method="post">
-                        <div class="row register-form">
+                        <div class="row register-form cus_lineheight">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="name" placeholder="Name *" value="" />

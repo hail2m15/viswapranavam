@@ -9,10 +9,11 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="login-heading">Sign In</h3> 
-                    <div class="row login-form">
-                        <div class="col-md-3">
-                        </div>
+
                         <form method="post">
+                        <div class="row login-form cus_lineheight">
+                            <div class="col-md-3">
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="username" class="form-control" placeholder="UserName*"/>
@@ -23,10 +24,10 @@
                                 <div class="form-group" style="text-align:center">
                                     <input type="submit" name="submit" class="btnRegisterLogin"  value="Login"/>
                                 </div>
-
+                                </div>
                             </div>
                         </form>
-                    </div>
+
                 </div>
             </div>
         </div>
