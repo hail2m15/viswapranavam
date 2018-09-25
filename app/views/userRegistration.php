@@ -24,7 +24,12 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="country" placeholder="Country*" value="" />
                                 </div>
-
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -34,10 +39,10 @@
                                     <input type="text" class="form-control" name="city" placeholder="City *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
+                                    <input type="text" class="form-control" name="ccode" placeholder="Country Code *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone *" value="" />
                                 </div>
                                 <input type="submit" class="btnRegister" name="register" value="Register"/>
                             </div>
