@@ -12,5 +12,25 @@ class AuthModel extends \Core\Model {
     public function addNewPassword($name, $pass) {
         $this->db->update('adminlogin', array('password' => $pass), array('username' => $name));
     }
+    
+    public function register($input){
+         try {
+            $id = $this->db->insert('user_details', $input);
+            return $id;
+        } catch (PDOException $ex) {
+            echo Error::display('Registration Failed!' . $ex);
+        }
+    }
+    
+    public function insertLogin($input){
+         try {
+            $id = $this->db->insert('login', $input);
+            return $id;
+        } catch (PDOException $ex) {
+            echo Error::display('Registration Failed!' . $ex);
+        }
+    }
+    
+    
 
 }

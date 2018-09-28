@@ -27,13 +27,12 @@
                                 <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter name" name="name" required="">
                             </div>
                             <div class="col-md-7">
-                                <label for="exampleInputLastName">Address</label>
-                                <textarea  class="form-control" id="exampleInputAddress"  aria-describedby="nameHelp" placeholder="Enter Address"  rows="3" cols="50" name="address"></textarea>
-                            </div>
+                                <label for="exampleInputLastName">Email</label>
+                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter E-mail Address" name="email" required="">                            </div>
 
                             <div class= "col-md-7">
                                 <label for="exampleInputEmail1">Mobile</label>
-                                <input class="form-control" id="exampleInputPhonenumber" type="text" aria-describedby="mobileHelp" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" placeholder="Enter Mobile Number" name="mobile" required="">
+                                <input class="form-control" id="exampleInputPhonenumber" type="text" aria-describedby="mobileHelp" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" placeholder="Enter Mobile Number" name="phone" required="">
                             </div>
                         </div>  
                     </div>
@@ -63,22 +62,32 @@ if ($data['success']) {
     <!--table-->
     <div class="card mb-3">
         <div class="card-header">
-            <i class="fa fa-table"></i>&nbspAGENT LIST</div>
+            <i class="fa fa-table"></i>&nbspHealer List LIST</div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                     <thead>    
                         <tr>
-                            <th>Username</th>
-                            <th>Mobile</th>
-                            <th>Address</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
                             <th></th>
                         </tr>
                     </thead>
 
                     <tbody>
-       
+                        <?php
+                        foreach ($data as $dat) {
+                            echo '<tr><form method="post">';
+                            echo '<td>' . $dat->name . ' </td>';
+                            echo '<td>' . $dat->phone . '</td>';
+                            echo '<td>' . $dat->email . '</td>';
+                           
+                            ?> 
+                        </form></tr>
+                    <?php }
+                    ?>
                     </tbody>
                 </table>
             </div>
@@ -129,12 +138,12 @@ if ($data['success']) {
 
 
 <script>
-    $(document).ready(function() {
-        $('.delete').click(function() {
+    $(document).ready(function () {
+        $('.delete').click(function () {
             var tr = $(this).parent().parent();
             console.log(tr.find('input').val());
             if (confirm('Are you sure ?')) {
-                $.post('deleteagent', {'mobile': tr.find('.mobile').val()}, function(data) {
+                $.post('deleteagent', {'mobile': tr.find('.mobile').val()}, function (data) {
                     tr.remove();
 
                 });
@@ -142,12 +151,12 @@ if ($data['success']) {
         });
     });
 
-    $('.edit').click(function() {
+    $('.edit').click(function () {
         var tr = $(this).parent().parent();
         $('#uname').val(tr.find('.name').val());
         $('#umobile').val(tr.find('.mobile').val());
         $('#uaddress').val(tr.find('.address').val());
-             
+
     });
 
 </script>

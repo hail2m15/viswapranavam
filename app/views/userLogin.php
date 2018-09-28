@@ -10,7 +10,7 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="login-heading">Sign In</h3> 
 
-                        <form method="post">
+                    <form method="post">
                         <div class="row login-form cus_lineheight">
                             <div class="col-md-2">
                             </div>
@@ -21,17 +21,19 @@
                                 <div class="form-group">
                                     <input type="password" name="password" class="form-control" placeholder="Password *" required/>
                                 </div>
+                                <?php if ($error) { ?>
                                 <div class="login-message">
                                     <p>Username/Password doesnt match</p>
                                 </div>
+                                <?php } ?>
                                 <div class="form-group" style="text-align:center">
                                     <input type="submit" name="submit" class="btnRegisterLogin"  value="Login"/>
                                 </div>
 
                             </div>
-        
+
                         </div>
-                        </form>
+                    </form>
 
                 </div>
             </div>

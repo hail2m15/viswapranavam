@@ -1,7 +1,7 @@
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="home">ADMIN</a>
+    <a class="navbar-brand" href="home">USER</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,6 +13,13 @@
                     <span class="nav-link-text">HOME</span>
                 </a>
             </li>
+            
+            <!--li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="healerView">
+                    <i class="fa fa-fw fa-history"></i>
+                    <span class="nav-link-text">HISTORY</span>
+                </a>
+            </li-->
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
                 <a class="nav-link" href="changepassword">

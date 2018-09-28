@@ -1683,3 +1683,306 @@
 #5 {main}</pre>
 
            <hr />
+<p>Error on Sep 25, 2018 23:35PM - ksort() expects parameter 1 to be array, null given in C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php on line 126</p><p>Error on Sep 25, 2018 23:36PM - ksort() expects parameter 1 to be array, null given in C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php on line 126</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 25, 2018 23:36PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mobile' cannot be null</p>
+
+           <p><strong>Code:</strong> 23000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 137</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php(137): PDOStatement->execute()
+#1 C:\xampp\htdocs\viswapranavam\app\Models\AuthModel.php(18): Helpers\Database->insert('user_details', Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Controllers\Auth.php(105): Models\AuthModel->register(Array)
+#3 [internal function]: Controllers\Auth->register()
+#4 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Aut...')
+#6 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(60): Core\Router::dispatch()
+#7 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 25, 2018 23:38PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'username' cannot be null</p>
+
+           <p><strong>Code:</strong> 23000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 137</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php(137): PDOStatement->execute()
+#1 C:\xampp\htdocs\viswapranavam\app\Models\AuthModel.php(27): Helpers\Database->insert('login', Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Controllers\Auth.php(119): Models\AuthModel->insertLogin(Array)
+#3 [internal function]: Controllers\Auth->register()
+#4 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Aut...')
+#6 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(60): Core\Router::dispatch()
+#7 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<p>Error on Sep 27, 2018 0:19AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\user\home.php on line 57</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 22:44PM</p>
+
+           <p><strong>Message:</strong> syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN)</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\views\user\details.php</p>
+
+           <p><strong>Line:</strong> 167</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Controllers\User.php(68): Core\View::render('user/details', Array, NULL)
+#1 [internal function]: Controllers\User->details()
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Use...')
+#4 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(62): Core\Router::dispatch()
+#5 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#6 {main}</pre>
+
+           <hr />
+<p>Error on Sep 27, 2018 23:03PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\home.php on line 84</p><p>Error on Sep 27, 2018 23:06PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\home.php on line 84</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:07PM</p>
+
+           <p><strong>Message:</strong> Call to undefined method Models\AuthModel::getRequests()</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php</p>
+
+           <p><strong>Line:</strong> 39</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 [internal function]: Controllers\Admin->Home()
+#1 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#3 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(62): Core\Router::dispatch()
+#4 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#5 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:07PM</p>
+
+           <p><strong>Message:</strong> Class 'Models\AddminModel' not found</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php</p>
+
+           <p><strong>Line:</strong> 20</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(122): Controllers\Admin->__construct(NULL)
+#1 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#2 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(62): Core\Router::dispatch()
+#3 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#4 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:08PM</p>
+
+           <p><strong>Message:</strong> Class 'Models\AddminModel' not found</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php</p>
+
+           <p><strong>Line:</strong> 20</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(122): Controllers\Admin->__construct(NULL)
+#1 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#2 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(62): Core\Router::dispatch()
+#3 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#4 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:12PM</p>
+
+           <p><strong>Message:</strong> Call to undefined method Models\AdminModel::getDetails()</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php</p>
+
+           <p><strong>Line:</strong> 67</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 [internal function]: Controllers\Admin->details()
+#1 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#3 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#4 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#5 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:34PM</p>
+
+           <p><strong>Message:</strong> Call to undefined function Controllers\unsset()</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php</p>
+
+           <p><strong>Line:</strong> 41</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 [internal function]: Controllers\Admin->healerView()
+#1 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#3 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#4 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#5 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:34PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mobile' in 'field list'</p>
+
+           <p><strong>Code:</strong> 42S22</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 137</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php(137): PDOStatement->execute()
+#1 C:\xampp\htdocs\viswapranavam\app\Models\AdminModel.php(10): Helpers\Database->insert('healer', Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php(42): Models\AdminModel->registerHealer(Array)
+#3 [internal function]: Controllers\Admin->healerView()
+#4 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#6 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#7 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:35PM</p>
+
+           <p><strong>Message:</strong> Too few arguments to function Models\AdminModel::insertLogin(), 0 passed in C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php on line 50 and exactly 1 expected</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Models\AdminModel.php</p>
+
+           <p><strong>Line:</strong> 35</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php(50): Models\AdminModel->insertLogin()
+#1 [internal function]: Controllers\Admin->healerView()
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#4 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#5 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#6 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:36PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'username' cannot be null</p>
+
+           <p><strong>Code:</strong> 23000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 137</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php(137): PDOStatement->execute()
+#1 C:\xampp\htdocs\viswapranavam\app\Models\AdminModel.php(38): Helpers\Database->insert('login', Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php(50): Models\AdminModel->insertLogin(Array)
+#3 [internal function]: Controllers\Admin->healerView()
+#4 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#6 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#7 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 27, 2018 23:36PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'username' cannot be null</p>
+
+           <p><strong>Code:</strong> 23000</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 137</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php(137): PDOStatement->execute()
+#1 C:\xampp\htdocs\viswapranavam\app\Models\AdminModel.php(38): Helpers\Database->insert('login', Array)
+#2 C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php(50): Models\AdminModel->insertLogin(Array)
+#3 [internal function]: Controllers\Admin->healerView()
+#4 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Adm...')
+#6 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#7 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#8 {main}</pre>
+
+           <hr />
+<p>Error on Sep 27, 2018 23:42PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\healerView.php on line 81</p><p>Error on Sep 27, 2018 23:43PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\healerView.php on line 81</p><p>Error on Sep 27, 2018 23:44PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\healerView.php on line 81</p><p>Error on Sep 27, 2018 23:44PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\healerView.php on line 81</p><p>Error on Sep 27, 2018 23:45PM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\admin\healerView.php on line 81</p><p>Error on Sep 27, 2018 23:54PM - password_hash() expects parameter 3 to be array, null given in C:\xampp\htdocs\viswapranavam\app\Controllers\Admin.php on line 44</p><p>Error on Sep 27, 2018 23:55PM - ksort() expects parameter 1 to be array, null given in C:\xampp\htdocs\viswapranavam\app\Helpers\Database.php on line 126</p><p>Error on Sep 28, 2018 0:36AM - require(C:\xampp\htdocs\viswapranavam\app/views/healer/home.php): failed to open stream: No such file or directory in C:\xampp\htdocs\viswapranavam\app\Core\View.php on line 34</p><p>Error on Sep 28, 2018 0:37AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 58</p><p>Error on Sep 28, 2018 0:37AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 58</p><p>Error on Sep 28, 2018 0:39AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 58</p><p>Error on Sep 28, 2018 0:40AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 58</p><p>Error on Sep 28, 2018 0:40AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 45</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Sep 28, 2018 0:56AM</p>
+
+           <p><strong>Message:</strong> Too few arguments to function Models\HealerModel::getHealingRequests(), 0 passed in C:\xampp\htdocs\viswapranavam\app\Controllers\Healer.php on line 31 and exactly 1 expected</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> C:\xampp\htdocs\viswapranavam\app\Models\HealerModel.php</p>
+
+           <p><strong>Line:</strong> 17</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 C:\xampp\htdocs\viswapranavam\app\Controllers\Healer.php(31): Models\HealerModel->getHealingRequests()
+#1 [internal function]: Controllers\Healer->Home()
+#2 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(124): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\viswapranavam\app\Core\Router.php(214): Core\Router::invokeObject('Controllers\\Hea...')
+#4 C:\xampp\htdocs\viswapranavam\app\Core\routes.php(63): Core\Router::dispatch()
+#5 C:\xampp\htdocs\viswapranavam\index.php(80): require('C:\\xampp\\htdocs...')
+#6 {main}</pre>
+
+           <hr />
+<p>Error on Sep 28, 2018 0:56AM - Invalid argument supplied for foreach() in C:\xampp\htdocs\viswapranavam\app\views\healer\home.php on line 45</p>

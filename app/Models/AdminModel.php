@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class AddminModel extends \Core\Model {
+class AdminModel extends \Core\Model {
 
     public function registerHealer($register) {
 
@@ -13,7 +13,23 @@ class AddminModel extends \Core\Model {
             echo Error::display('Registration Failed!' . $ex);
         }
     }
+    
+     public function getRequests() {
+        return $this->db->select('SELECT * FROM healingtable');
+    }
+    
+      public function getDetails($id) {
+        return $this->db->select('SELECT * FROM healingtable WHERE :id=id', array(':id' => $id));
+    }
 
+    public function updateHealingTable($data, $id) {
+        try {
+            $this->db->update('healingtable', $data, array('id'=>$id));
+        } catch (PDOException $ex) {
+            echo Error::display("Registration Failed!" . $ex);
+        }
+    }
+    
     public function registerAccountant($register) {
 
         try {

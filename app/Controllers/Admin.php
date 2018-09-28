@@ -1,56 +1,75 @@
 <?php
 
-
-
 namespace Controllers;
 
-
-
 use Core\View,
-
     Helpers\Session,
-
     Helpers\Url;
-
-
 
 class Admin extends \Core\Controller {
 
     public function __construct() {
-        $this->_model = new \Models\AuthModel();
+        $this->_model = new \Models\AdminModel();
         if (!Session::get('vadmin')) {
             Url::redirect('');
         }
     }
 
-    public function loadHeader($title){
+    public function loadHeader($title) {
         View::renderTemplate('header', array('title' => $title));
         View::render('admin/common/head');
     }
 
-     public function loadFooter(){
+    public function loadFooter() {
         View::render('admin/common/foot');
         View::renderTemplate('footer');
     }
-    
+
     public function Home() {
 
         $this->loadHeader('Home');
-
-        View::render('admin/Home');
+        if(isset($_POST['assign'])){
+            $input = array(
+              'hid' => $_POST['hid'],
+                'status'=> 'H'
+            );
+            
+            $this->_model->updateHealingTable($input,$_POST['id']);
+        }
+        $data = $this->_model->getRequests();
+        $healers = $this->_model->getAllHealer();
+        View::render('admin/Home', array('requests'=>$data,'healers'=>$healers));
 
         $this->loadFooter();
-
     }
+
     public function healerView() {
 
         $this->loadHeader('User');
+        if (isset($_POST['save'])) {
+            unset($_POST['save']);
+            $id = $this->_model->registerHealer($_POST);
+            if ($id) {
+                $options = [
+                    'cost' => 11
+                ];
+                $hash = password_hash($_POST['phone'], PASSWORD_BCRYPT, $options);
 
-        View::render('admin/healerView');
+                $data = array(
+                    'username' => $_POST['email'],
+                    'password' => $hash,
+                    'level' => '1',
+                    'fid' => $id,
+                );
+                $this->_model->insertLogin($data);
+            }
+        }
+        $healers = $this->_model->getAllHealer();
+        View::render('admin/healerView', $healers);
 
         $this->loadFooter();
-
     }
+
     public function healerAdd() {
 
         $this->loadHeader('Add User');
@@ -58,19 +77,60 @@ class Admin extends \Core\Controller {
         View::render('admin/healerAdd');
 
         $this->loadFooter();
-
     }
 
     public function userView() {
 
         $this->loadHeader('User');
-
-        View::render('admin/userView');
+$user = $this->_model->getAllUser();
+        View::render('admin/userView',$user);
 
         $this->loadFooter();
-
     }
 
-    
-}
+    public function details() {
+        $this->loadHeader('Healing details');
+        $id = $_GET['id'];
+        $data = $this->_model->getDetails($id);
+        $user = $this->_model->getUser($data[0]->fid);
+        View::render('admin/details', array('details' => $data[0], 'user' => $user[0]), $error);
+        $this->loadFooter();
+    }
 
+    public function changePassword() {
+
+        $this->loadHeader('Change Password');
+
+        if (isset($_POST['submit'])) {
+
+            $name = $_POST['name'];
+
+            if (password_verify($_POST['old'], $this->_model->getPassword1($name))) {
+
+                if ($_POST['new'] == $_POST['cnew']) {
+
+                    $options = [
+                        'cost' => 11
+                    ];
+
+                    $hash = password_hash($_POST['new'], PASSWORD_BCRYPT, $options);
+
+                    $this->_model->addNewPassword($name, $hash);
+
+                    $data = "Password updated successfully!";
+                } else {
+
+                    $error[] = "New password missmatched with confirmation!!";
+                }
+            } else {
+
+                $error[] = "Wrong password!!";
+            }
+        }
+
+        View::render('admin/changepassword', $data, $error);
+
+        $this->loadFooter();
+    }
+
+}

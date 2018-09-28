@@ -24,15 +24,29 @@
 
                     <thead>    
                         <tr>
-                            <th>Username</th>
-                            <th>Mobile</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
                             <th>Address</th>
-                            <th></th>
+                            <th>State</th>
+                            <th>Country</th>
                         </tr>
                     </thead>
-
+                    <?php
+                    foreach ($data as $dat) {
+                        echo '<tr><form method="post">';
+                        echo '<td>' . $dat->name . ' </td>';
+                        echo '<td>' . $dat->ccode.' '.$dat->phone . '</td>';
+                        echo '<td>' . $dat->email . '</td>';
+                        echo '<td>' . $dat->address . '</td>';
+                        echo '<td>' . $dat->state . '</td>';
+                        echo '<td>' . $dat->country . '</td>';
+                        ?> 
+                        </form></tr>
+                    <?php }
+                    ?>
                     <tbody>
-       
+
                     </tbody>
                 </table>
             </div>
@@ -40,7 +54,7 @@
     </div>
 </div>
 
-<!-- Logout Modal-->
+
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -83,12 +97,12 @@
 
 
 <script>
-    $(document).ready(function() {
-        $('.delete').click(function() {
+    $(document).ready(function () {
+        $('.delete').click(function () {
             var tr = $(this).parent().parent();
             console.log(tr.find('input').val());
             if (confirm('Are you sure ?')) {
-                $.post('deleteagent', {'mobile': tr.find('.mobile').val()}, function(data) {
+                $.post('deleteagent', {'mobile': tr.find('.mobile').val()}, function (data) {
                     tr.remove();
 
                 });
@@ -96,12 +110,12 @@
         });
     });
 
-    $('.edit').click(function() {
+    $('.edit').click(function () {
         var tr = $(this).parent().parent();
         $('#uname').val(tr.find('.name').val());
         $('#umobile').val(tr.find('.mobile').val());
         $('#uaddress').val(tr.find('.address').val());
-             
+
     });
 
 </script>
