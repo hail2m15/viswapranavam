@@ -23,6 +23,8 @@ Router::any('admin/userAdd', 'Controllers\Admin@userAdd');
 Router::any('admin/healerView', 'Controllers\Admin@healerView');
 Router::any('admin/healerAdd', 'Controllers\Admin@healerAdd');
 Router::any('admin/detail', 'Controllers\Admin@details');
+Router::any('admin/payment', 'Controllers\Admin@payment');
+Router::any('admin/paid', 'Controllers\Admin@paid');
 Router::any('admin/changepassword', 'Controllers\Admin@changePassword');
 
 Router::any('user/logout', 'Controllers\Auth@logout');
@@ -35,6 +37,8 @@ Router::any('healer/logout', 'Controllers\Auth@logout');
 Router::any('healer/home', 'Controllers\Healer@Home');
 Router::any('healer/detail', 'Controllers\Healer@details');
 Router::any('healer/changepassword', 'Controllers\Healer@changePassword');
+Router::any('healer/healingComplete', 'Controllers\Healer@healingComplete');
+Router::any('healer/completeDetails', 'Controllers\Healer@completeDetails');
 
 Router::any('logout', 'Controllers\Auth@logout');
 

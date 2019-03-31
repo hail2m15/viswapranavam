@@ -27,8 +27,8 @@
                             <div class="form-row">
 
                                 <div class="col-md-7">
-                                    <label for="exampleInputLastName">UserName</label>
-                                    <input class="form-control"  type="text" name="name" aria-describedby="nameHelp" placeholder="E-mail"  required="required" readonly value="admin">
+                                    <label for="exampleInputLastName">Email</label>
+                                    <input class="form-control"  type="text" name="name" aria-describedby="nameHelp" value="<?php echo $data['healer']->email ?>"  required="required" readonly="">
                                 </div>
                                 <div class="col-md-7">
                                     <label for="exampleInputLastName">Old Password</label>
@@ -59,7 +59,7 @@
 
 if ($error) {
                         echo '<br>' . Error::display($error);
-                    } else if ($data) {
+                    } else if ($data['message']) {
                         echo '<br><div class="alert alert-success">' . $data . '</div>';
                     }
                     ?>

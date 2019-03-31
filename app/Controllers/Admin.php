@@ -28,17 +28,21 @@ class Admin extends \Core\Controller {
     public function Home() {
 
         $this->loadHeader('Home');
-        if(isset($_POST['assign'])){
+        if (isset($_POST['assign'])) {
             $input = array(
-              'hid' => $_POST['hid'],
-                'status'=> 'H'
+                'status' => 'H'
             );
-            
-            $this->_model->updateHealingTable($input,$_POST['id']);
+
+            $data = array(
+                'healerid' => $_POST['hid'],
+                'tableid' => $_POST['id']
+            );
+            $this->_model->insertAssignedHealer($data);
+            $this->_model->updateHealingTable($input, $_POST['id']);
         }
         $data = $this->_model->getRequests();
         $healers = $this->_model->getAllHealer();
-        View::render('admin/Home', array('requests'=>$data,'healers'=>$healers));
+        View::render('admin/Home', array('requests' => $data, 'healers' => $healers));
 
         $this->loadFooter();
     }
@@ -82,8 +86,8 @@ class Admin extends \Core\Controller {
     public function userView() {
 
         $this->loadHeader('User');
-$user = $this->_model->getAllUser();
-        View::render('admin/userView',$user);
+        $user = $this->_model->getAllUser();
+        View::render('admin/userView', $user);
 
         $this->loadFooter();
     }
@@ -93,7 +97,8 @@ $user = $this->_model->getAllUser();
         $id = $_GET['id'];
         $data = $this->_model->getDetails($id);
         $user = $this->_model->getUser($data[0]->fid);
-        View::render('admin/details', array('details' => $data[0], 'user' => $user[0]), $error);
+        $healer = $this->_model->getHealer($id);
+        View::render('admin/details', array('details' => $data[0], 'user' => $user[0], 'healer' => $healer), $error);
         $this->loadFooter();
     }
 
@@ -130,6 +135,34 @@ $user = $this->_model->getAllUser();
 
         View::render('admin/changepassword', $data, $error);
 
+        $this->loadFooter();
+    }
+
+    public function payment() {
+        $this->loadHeader('Payment');
+        if (isset($_POST['paid'])) {
+            $input = array(
+                'pdate' => date('Y-m-d'),
+                'pstatus' => 'D'
+            );
+            $this->_model->updateHealingTable($input, $_POST['id']);
+        }
+        $data = $this->_model->getPaymentRequests();
+        View::render('admin/payment', array('requests' => $data));
+        $this->loadFooter();
+    }
+
+    public function paid() {
+        $this->loadHeader('Paid sessions');
+        if (isset($_POST['cancel'])) {
+            $input = array(
+                'pdate' => date('Y-m-d'),
+                'pstatus' => 'C'
+            );
+            $this->_model->updateHealingTable($input, $_POST['id']);
+        }
+        $data = $this->_model->getPaidRequests();
+        View::render('admin/paidView', array('requests' => $data));
         $this->loadFooter();
     }
 

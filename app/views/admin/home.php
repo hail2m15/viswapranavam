@@ -10,46 +10,7 @@
         </ol>
 
         <div class="row">
-            <!--div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-danger o-hidden h-100">
-                    <div class="card-body">
-                        <div class="card-body-icon">
-                            <i class="fa fa-envelope faa-shake animated c"></i>
-                        </div>
-                        Todays heaing requests!
-                    </div>
-                    <a class="card-footer text-white clearfix small z-1" href="today">
-                        <span class="float-left">View Details</span>
-                        <span class="float-right">
-                            <i class="fa fa-angle-right"></i>
-                        </span>
-                    </a>
-                </div>
-
-            </div>
-
-
-       
-            <div class="col-xl-3 col-sm-6 mb-3">
-
-                <div class="card text-white bg-primary o-hidden h-100">
-                    <div class="card-body">
-                        <div class="card-body-icon">
-                            <i class="fa fa-bell faa-ring animated c"></i>
-                        </div>
-                       Pending healing requests!
-                    </div>
-                    <a class="card-footer text-white clearfix small z-1" href="reminder">
-                        <span class="float-left">View Details</span>
-                        <span class="float-right">
-                            <i class="fa fa-angle-right"></i>
-                        </span>
-                    </a>
-                </div>
-
-
-            </div-->
-
+   
         </div>
 
     </div>
@@ -76,6 +37,8 @@
                             <th>Reason</th>       
                             <th>Time Zone</th>
                             <th>Status</th>
+                            <th>Action</th>
+
                         </tr>
                     </thead>
 
@@ -101,9 +64,11 @@
                             } else if ($status == 'W') {
                                 $print = 'Waiting for healing notes';
                             } else if ($status == 'C') {
+                                $print = 'Closed';
+                            } else if ($status == 'D') {
                                 $print = 'Healing done';
                             } else if ($status == 'X') {
-                                $print = 'Cancelled';
+                                $print = 'New session sceduled';
                             }
                             echo '<td>' . $print . '</td>';
                             echo '<td>'
@@ -112,6 +77,8 @@
                         </form>
                         <?php if ($status == 'R') { ?>
                             <td>   <button class="btn btn-success edit" data-toggle="modal" data-target="#editModal">Assign Healer</button></td>
+                        <?php } else if($status != 'C' && $status != 'D' && $status != 'X'){ ?>
+                            <td>   <button class="btn btn-primary edit" data-toggle="modal" data-target="#editModal">Assign More Healer</button></td>
                         <?php } ?>
 
 
@@ -147,7 +114,7 @@
                                 <select class="form-control" name="hid">
                                     <?php
                                     foreach ($data['healers'] as $dat) {
-                                        echo '<option value="'.$dat->id.'">'.$dat->name.'</option>';
+                                        echo '<option value="' . $dat->id . '">' . $dat->name . '</option>';
                                     }
                                     ?>     
                                 </select>
@@ -166,28 +133,3 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    $(document).ready(function () {
-        $('.delete').click(function () {
-            var tr = $(this).parent().parent();
-            console.log(tr.find('input').val());
-            if (confirm('Are you sure ?')) {
-                $.post('deleteagent', {'mobile': tr.find('.mobile').val()}, function (data) {
-                    tr.remove();
-
-                });
-            }
-        });
-    });
-
-    $('.edit').click(function () {
-        var tr = $(this).parent().parent();
-        $('#id').val(tr.find('.id').val());
-//        $('#umobile').val(tr.find('.mobile').val());
-//        $('#uaddress').val(tr.find('.address').val());
-
-    });
-
-</script>

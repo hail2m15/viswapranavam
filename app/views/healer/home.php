@@ -37,6 +37,7 @@
                             <th>Reason</th>       
                             <th>Time Zone</th>
                             <th>Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
 
@@ -61,18 +62,18 @@
                                 $print = 'Scheduled healing';
                             } else if ($status == 'W') {
                                 $print = 'Waiting for healing notes';
-                            } else if ($status == 'C') {
+                            } else if ($status == 'D') {
                                 $print = 'Healing done';
-                            } else if ($status == 'X') {
-                                $print = 'Cancelled';
+                            } else if ($status == 'C') {
+                                $print = 'Payment Done';
+                            }else if ($status == 'X') {
+                                $print = 'New session sceduled';
                             }
                             echo '<td>' . $print . '</td>';
-                            echo '<td>'
-                            ?> <a href="detail?id=<?php echo $dat->id ?>"><button type="button" class="btn btn-xs btn-info">view</button></a></td>
-
-
-
-                        </form></tr>
+                            ?>
+                    <td><a href="detail?id=<?php echo $dat->id ?>"><button type="button" class="btn btn-xs btn-info">view</button></a></td>
+                </form></tr>
+                
                     <?php }
 
                     ?>

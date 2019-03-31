@@ -15,6 +15,27 @@
             </li>
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="healerView">
+                    <i class="fa fa-medkit"></i>
+                    <span class="nav-link-text">MANAGE HEALER</span>
+                </a>
+            </li>
+            
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="payment">
+                    <i class="fa fa-money"></i>
+                    <span class="nav-link-text">PAYMENT</span>
+                </a>
+            </li>
+            
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="paid">
+                    <i class="fa fa-list-alt"></i>
+                    <span class="nav-link-text">PAID LIST</span>
+                </a>
+            </li>
+            
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
                 <a class="nav-link" href="changepassword">
                     <i class="fa fa-lock"></i>
                     <span class="nav-link-text">CHANGE PASSWORD</span>

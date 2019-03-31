@@ -7,7 +7,6 @@
             </li>
 
         </ol>
-        <!-- Icon Cards-->
 
         <div class="col-sm-1 col-sm-1 mb-3">
 
@@ -15,8 +14,8 @@
     </div>
 
     <!-- register form -->
-    <div class="container">
-        <div class="card card-register mx-4 ">
+    <div class="container-fluid">
+        <div class="card card-register ">
             <div class="card-header">Register new healer</div>
             <div class="card-body">
                 <form method="post">
@@ -28,7 +27,7 @@
                             </div>
                             <div class="col-md-7">
                                 <label for="exampleInputLastName">Email</label>
-                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter E-mail Address" name="email" required="">                            </div>
+                                <input class="form-control" id="exampleInputName" type="email" aria-describedby="nameHelp" placeholder="Enter E-mail Address" name="email" required="">                            </div>
 
                             <div class= "col-md-7">
                                 <label for="exampleInputEmail1">Mobile</label>
@@ -72,7 +71,7 @@ if ($data['success']) {
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th></th>
+                            
                         </tr>
                     </thead>
 

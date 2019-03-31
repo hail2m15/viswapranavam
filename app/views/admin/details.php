@@ -131,29 +131,67 @@
 
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="row mt-2">
-                                        <?php 
-                                            $status = $data['details']->status;
-                                            $print = '';
-                                            if($status == 'R'){
-                                                $print = 'Requested for healing';
-                                            }else if($status == 'A'){
-                                                $print = 'Approved healing request';
-                                            }else if($status == 'H'){
-                                                $print = 'Healer assigned for healing';
-                                            }else{
-                                                $print = 'Healing done';
-                                            }
-                                            echo '<input class="form-control" name="" value="'.$print.'">';
+                                        <?php
+                                        $status = $data['details']->status;
+                                        $print = '';
+                                        if ($status == 'R') {
+                                            $print = 'Requested for healing';
+                                        } else if ($status == 'A') {
+                                            $print = 'Approved healing request';
+                                        } else if ($status == 'H') {
+                                            $print = 'Healer assigned for healing';
+                                        } else if ($status == 'S') {
+                                            $print = 'Scheduled healing';
+                                        } else if ($status == 'W') {
+                                            $print = 'Waiting for healing notes';
+                                        } else if ($status == 'C') {
+                                            $print = 'Closed';
+                                        } else if ($status == 'D') {
+                                            $print = 'Healing done';
+                                        } else if ($status == 'X') {
+                                            $print = 'New session sceduled';
+                                        }
+                                        echo '<input class="form-control" name="" value="' . $print . '">';
                                         ?>
-                                        
+
                                     </div>   
                                 </form>
                             </div>
                         </div>
-           
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <p> Healers Assigned
+                                        <i class="fa fa-medkit pull-right"></i>
+                                    </p>
+                                </h4>
+
+                                <div class="row mt-2">
+
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+
+                                            <?php
+                                            if ($data['healer']) {
+                                                foreach($data['healer'] as $dat) {
+                                                    echo '<label>'.$dat->name.'</label>';
+                                                }
+                                            } else {
+                                                echo '<label>No healers assigned</label>';
+                                            }
+                                            ?>
+                                        </div>
+
+                                    </div>  
+                                </div>   
+                            </div>
+                        </div>
+
                     </div>
 
-              
+
                 </div>
             </div>
         </div>
